@@ -1,0 +1,76 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* Menu Button */
+.menu-button {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 10vw;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+/* Submenu */
+.submenu {
+    position: fixed;
+    left: -90vw;
+    top: 0;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    transition: left 0.3s ease;
+}
+
+.submenu a {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    border-right: 1px solid #777;
+}
+
+.submenu a:hover {
+    background-color: #777;
+}
+
+/* Menu Open States */
+.open-menu {
+    left: 0;
+}
+
+.menu-opened {
+    left: 90vw;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .submenu a {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 16px;
+    }
+}
