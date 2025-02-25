@@ -10,6 +10,10 @@ body {
     display: flex;
 }
 
+main {
+    margin-left: 20vw;
+}
+
 /* Menu Button */
 .menu-button {
     position: fixed;
@@ -64,6 +68,11 @@ body {
 
 .menu-opened {
     left: 90vw;
+}
+
+#logo {
+    /* float: center; */
+    width: 60%;
 }
 
 /* Responsive Design */
