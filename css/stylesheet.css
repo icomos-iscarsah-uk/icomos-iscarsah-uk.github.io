@@ -1,3 +1,22 @@
+/* Default Light Mode */
+:root {
+    --primary-color: #3b68a3;
+    --secondary-color: #8697C4;
+    --accent-color: #e74c3c;
+    --text-color: #000000;
+    --background-color: #ffffff;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --primary-color: #ffffff;
+    --secondary-color: #34495e;
+    --accent-color: #e74c3c;
+    --text-color: #ffffff;
+    --background-color: #2c3e50;
+}
+
+
 /* General Styles */
 * {
     margin: 0;
@@ -10,8 +29,21 @@ body {
     display: flex;
 }
 
+header {
+
+}
+
 main {
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin-left: 20vw;
+    margin-right: 10vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
+
+footer {
+
 }
 
 /* Menu Button */
@@ -21,8 +53,8 @@ main {
     top: 0;
     width: 10vw;
     height: 100vh;
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,6 +62,10 @@ main {
     cursor: pointer;
     transition: left 0.3s ease;
     z-index: 10;
+}
+
+.menu-button:hover {
+    background-color: var(--accent-color);
 }
 
 /* Submenu */
@@ -46,19 +82,21 @@ main {
 .submenu a {
     flex: 1;
     text-align: center;
-    padding: 20px;
-    color: white;
+    padding: 10px;
+    color: var(--background-color);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #555;
-    border-right: 1px solid #777;
+    background-color: var(--secondary-color);
+    border-right: 1px solid var(--background-color);
+    writing-mode:sideways-lr ;
+    text-orientation: mixed;
 }
 
 .submenu a:hover {
-    background-color: #777;
+    background-color: var(--accent-color);
 }
 
 /* Menu Open States */
@@ -76,10 +114,28 @@ main {
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (min-width: 480px) {
     .submenu a {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        font-size: 16px;
+        padding: 15px;
+        font-size: 20px;
     }
 }
+
+@media (min-width: 990px) {
+    .submenu a {
+        padding: 20px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .submenu a {
+        writing-mode:horizontal-tb ;
+        text-orientation: mixed;
+        font-size: 24px;
+    }
+}
+
+
+
+
