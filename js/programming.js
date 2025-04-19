@@ -1,3 +1,4 @@
+// Menu code
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu-button");
     const submenu = document.querySelector(".submenu");
@@ -17,3 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+// Drop down menu code
+// Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownHeaders = document.querySelectorAll(".dropdown-header");
+  
+    dropdownHeaders.forEach(function (header) {
+      header.addEventListener("click", function () {
+        const content = header.nextElementSibling;
+        const icon = header.querySelector(".dropdown-icon");
+  
+        // Toggle visibility
+        content.classList.toggle("show");
+  
+        // Update the icon
+        icon.textContent = content.classList.contains("show") ? "−" : "+";
+      });
+    });
+  });
+  
