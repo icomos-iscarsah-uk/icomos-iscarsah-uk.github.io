@@ -61,7 +61,7 @@ footer {
     font-size: 24px;
     cursor: pointer;
     transition: left 0.3s ease;
-    z-index: 10;
+    z-index: 100;
 }
 
 .menu-button:hover {
@@ -77,6 +77,7 @@ footer {
     height: 100vh;
     display: flex;
     transition: left 0.3s ease;
+    z-index: 100;
 }
 
 .submenu a {
@@ -108,10 +109,64 @@ footer {
     left: 90vw;
 }
 
+#logo_container {
+    position: relative; /* Required for absolute positioning inside */
+    height: 30vw;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+    z-index: 10;
+    /*height: 100vh;      Full viewport height */
+  }
+
 #logo {
     /* float: center; */
-    width: 60%;
+    height: 30vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 4rem;
 }
+
+#homepage_p {
+    text-align: center;   
+    margin-bottom: 2rem; 
+}
+
+#button_container {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    height: 5vh;           /* Full viewport height */
+}
+#button_1 {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center; 
+  }
+
+  #button_2 {
+    padding: 10px 20px;
+    background-color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center; 
+  }
+  
+  #button_1:hover {
+    background-color: var(--secondary-color); s
+  }
+
+  #button_2:hover {
+    background-color: var(--secondary-color); s
+  }
 
 /* Responsive Design */
 @media (min-width: 480px) {
