@@ -282,7 +282,65 @@ li {
     transform: scale(1.2);
 }
   
+/* Members blocks */
+.member-block {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    width: 300px;
+    margin: 40px auto; /* Centers the block horizontally */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.member-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.member-photo {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .member-photo:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
   
+  .member-info p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+  }
+  
+  .member-info a {
+    color: var(--background-color);
+    text-decoration: underline;
+  }
+  
+  .member-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .member-links a img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .member-links a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
 
 
 
@@ -295,10 +353,36 @@ li {
 }
 
 @media (min-width: 990px) {
+    main {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        margin-left: 30vw;
+        margin-right: 20vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
     .submenu a {
         padding: 20px;
         font-size: 24px;
     }
+    #logo_container {
+        position: relative; /* Required for absolute positioning inside */
+        height: 20vw;
+        margin-top: 5vw;
+        margin-bottom: 2vw;
+        z-index: 10;
+      }
+    
+    #logo {
+        height: 20vw;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 4rem;
+    }
+    
+
 }
 
 @media (min-width: 1200px) {
@@ -306,6 +390,30 @@ li {
         writing-mode:horizontal-tb ;
         text-orientation: mixed;
         font-size: 24px;
+    }
+    #logo_container {
+        position: relative; /* Required for absolute positioning inside */
+        height: 15vw;
+        margin-top: 0.5vw;
+        margin-bottom: 0.5vw;
+        z-index: 10;
+      }
+    
+    #logo {
+        height: 15vw;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 4rem;
+    }
+    #logo_small {
+        height: 10vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 1rem;
     }
 }
 
